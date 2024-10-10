@@ -1,0 +1,21 @@
+Sobre los cambios al html:
+-Añadí el atributo data-bs-theme="dark" para activar el modo oscuro de Bootstrap.
+-Cambié la clase del <body> a class="bg-dark text-light" para un fondo oscuro y texto claro, el input de búsqueda con clases adicionales:
+class="form-control bg-dark text-light" y los enlaces en el pie de página para que sean más visibles en el fondo oscuro, con class="text-light".
+
+Sobre el css:
+Agregué algunas cosas al css para asegurarme de que las tarjetas tengan un tamaño uniforme, que las imágenes se muestren correctamente, y que las
+descripciones largas sean accesibles por desplazamiento, pero sin afectar el diseño general.
+-.card: Define una altura fija para todas las tarjetas
+-.card-img-top: Establece una altura fija para las imágenes y usa object-fit: cover para asegurar que las imágenes cubran el espacio sin distorsionarse.
+-.card-body: Usa flexbox para organizar el contenido de la tarjeta verticalmente.
+-.description-container: Crea un contenedor para la descripción con una altura máxima, lo que hace que sea igual para todas las tarjetas, y en
+caso de que el contenido de la descripción exceda el espacio que se le asigna, permite scrollear.
+
+Sobre el .js:
+
+-Se implementó la funcionalidad completa de búsqueda y visualización de imágenes.
+-Se creó una función asíncrona buscarImagenes() para manejar la solicitud a la API de la NASA y mostrar los resultados.
+-Para cada resultado obtenido, se crea dinámicamente una tarjeta que lo contiene. 
+-Se añadieron event listeners para el botón de búsqueda y el input (para permitir buscar al presionar Enter).
+-El diseño permite mostrar 2 columnas en pantallas medianas y 3 en pantallas grandes.

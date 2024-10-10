@@ -1,3 +1,23 @@
 main {
-    min-height: calc(100vh - 160px);
-  }
+  min-height: calc(100vh - 160px);
+}
+
+.card {
+  height: 450px; /* Altura fija para todas las tarjetas */
+}
+
+.card-img-top {
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 150px; /* Altura máxima para la descripción, permite el scroll para que las tarjetas puedan mantener el mismo tamaño */
+}
